@@ -3,8 +3,12 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
+import { PeopleList } from "./views/PeopleList";
+import { PeoplePage } from "./views/PeoplePage";
+import { PlanetsList } from "./views/PlanetsList";
+import { PlanetsPage } from "./views/PlanetsPage";
+import { VehiclesList } from "./views/VehiclesList";
+import { VehiclesPage } from "./views/VehiclesPage";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -20,22 +24,32 @@ const Layout = () => {
 		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
 					<Switch>
 						<Route exact path="/">
 							<Home />
 						</Route>
-						<Route exact path="/demo">
-							<Demo />
+						<Route exact path="/people">
+							<PeopleList />
 						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
+						<Route exact path="/people/:id">
+							<PeoplePage />
+						</Route>
+						<Route exact path="/vehicles/">
+							<VehiclesList />
+						</Route>
+						<Route exact path="/vehicles/:id">
+							<VehiclesPage />
+						</Route>
+						<Route exact path="/planets/">
+							<PlanetsList />
+						</Route>
+						<Route exact path="/planets/:id">
+							<PlanetsPage />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
