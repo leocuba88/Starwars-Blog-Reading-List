@@ -3,26 +3,16 @@ import { Link, useParams } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
-// export function PeoplePage() {
-// 	const params = useParams();
-// 	return <h1>Page for people: {params.id} </h1>;
-// }
-
 export function PeoplePage() {
-	const [peoplePage, setPeoplePage] = useState([]);
+	const [peoplePage, setPeoplePage] = useState(null);
+	const params = useParams();
 
 	React.useEffect(() => {
-		fetch("https://www.swapi.tech/api/people/1")
+		fetch("https://www.swapi.tech/api/people/" + params.id)
 			.then(res => res.json())
 			.then(data => setPeoplePage(data.result))
 			.catch(err => console.error(err));
 	}, []);
 
-	return (
-		<div>
-			{peoplePage.map((people, index) => {
-				return <p key={index}>{people.skin_color}</p>;
-			})}
-		</div>
-	);
+	return <div>{peoplePage !== null && <div>{peoplePage.properties.height}</div>}</div>;
 }
