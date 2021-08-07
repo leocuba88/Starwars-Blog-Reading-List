@@ -26,6 +26,7 @@ const Layout = () => {
 		<div className="d-flex flex-column">
 			<FavoritesContext.Provider value={favoritesStates}>
 				<BrowserRouter basename={basename}>
+					<Navbar />
 					<ScrollToTop>
 						<Switch>
 							<Route exact path="/">
