@@ -17,7 +17,7 @@ export const Navbar = () => {
 					aria-expanded="false">
 					Dropdown button
 				</button>
-				<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<div className="dropdown-menu show" aria-labelledby="dropdownMenuButton">
 					<a className="dropdown-item" href="#">
 						Action
 					</a>

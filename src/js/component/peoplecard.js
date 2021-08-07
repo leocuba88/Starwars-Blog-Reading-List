@@ -30,6 +30,11 @@ export function PeopleCard(props) {
 				<div className="card-body">
 					<h5 className="card-title">{props.name}</h5>
 					<p className="card-text">
+						<ul>
+							<li>Height: {peoplePage !== null && <div>{peoplePage.properties.height}</div>}</li>
+							<li>Mass: {peoplePage !== null && <div>{peoplePage.properties.mass}</div>}</li>
+							<li>Gender: {peoplePage !== null && <div>{peoplePage.properties.gender}</div>}</li>
+						</ul>
 						<a href={"/people/" + props.uid}>Learn more</a>
 						{peoplePage !== null && <div>{peoplePage.properties.height}</div>}
 					</p>
@@ -53,5 +58,8 @@ export function PeopleCard(props) {
 
 PeopleCard.propTypes = {
 	name: PropTypes.string,
-	uid: PropTypes.string
+	uid: PropTypes.string,
+	height: PropTypes.string,
+	mass: PropTypes.string,
+	gender: PropTypes.string
 };
