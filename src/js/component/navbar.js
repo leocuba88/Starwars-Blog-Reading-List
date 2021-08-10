@@ -22,16 +22,17 @@ export const Navbar = () => {
 							setShowMenu("");
 						}
 					}}
-					className="btn btn-secondary dropdown-toggle"
+					className="dropdown_button"
 					type="button"
 					id="dropdownMenuButton"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false">
 					Favorites
+					<i className="fas fa-sort-down fa-lg downbutton" />
 				</button>
 				<div className={"dropdown-menu " + showMenu} aria-labelledby="dropdownMenuButton">
-					<ul className="dropdown_button" href="#">
+					<ul className="dropdown_button" aria-labelledby="dropdownMenuButton1">
 						{favorites.map((item, index) => {
 							return (
 								<li key={index} className="dropdown-item">
