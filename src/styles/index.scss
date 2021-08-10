@@ -1,15 +1,167 @@
-/* 
-    General Styles
-*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 .card-group{
     width: 300px;
     display: inline-block;
     margin: 10px;
     
+    
+}
+
+.container{
+    margin: auto;
+}
+
+.peopletitle{
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    
+}
+
+body{
+    background-image: url(https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-31.jpg);
+
+  background-attachment: scroll;
+
+}
+
+.card-title{
+    justify-content: space-between;
+    display: flex;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.logo{
+    width: 150px;
+    height: 75px;
+    margin-left: 50px;
+}
+
+.card{
+    background-color: grey;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.individualcard{
+    background: grey;
+    width: 450px;
+    height: 100%;
+    display: inline-block;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.individualimage{
+   height: 100%;
+   width: 350px;
+    display: inline-block;
+}
+
+.individualcontainer{
+  
+    height: 400px;
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    border-style: solid;
+    border-width: 10px 10px 10px 10px;
+    border-color: red;
+    border-radius: 25px;
+    
+}
+
+.individualtitle{
+    margin: auto;
+    color: black;
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.individualattributes{
+     list-style-type: none;
+     margin-top: 30px;
+     justify-content: space-between;
+     display: inline-block;
+     margin-left: 20px;
+     text-size-adjust: larger;
+     font-family: 'Libre Baskerville', serif;
+}
+
+.favoritesbutton{
+    color: #e75480;
+}
+
+.homecontainer{
+    background-color: none;
+    width: 80%;
+    height: 550px;
+    display: inline-block;
+    justify-content: space-evenly;
+    display: flex;
+    margin: auto;
 }
 
 
-.peopletitle {
-    color: red;
+
+.homedivs{
+   background-color: black;
+    width: 345px;
+    height: 100%;
+    display: inline-block;
+    border-style: solid;
+    border-color: grey;
+    border-width: 10px 10px 10px 10px;
+    border-radius: 25px;
+    
+}
+
+.homeimage{
+      width: 325px;
+    height: 95%;
+   border-radius: 15px;
+   border-top: none;
+   margin-top: 5px;
+}
+
+.picturetitle{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+    
+}
+
+.learnmore{
+    color: darkblue;
+}
+
+.dropdown_button{
+    border-radius: 5px;
+    width: 117px;
+    height: 40px;
+    border: none;
+    font-family: 'Libre Baskerville', serif;
+    margin-right: 50px;
+   
+}
+
+
+
+.downbutton{
+    color: #e75480;
+    margin-left: 8px;
+    padding-top: 10px;
+}
+
+.dropdown_menu{
+    width: 117px;
+    font-family: 'Libre Baskerville', serif;
+    
+}
+
+.dropdown-item{
+    display: inline-block;
+    font-size: 10px;
+    width: 100%;
+    padding: 0;
 }

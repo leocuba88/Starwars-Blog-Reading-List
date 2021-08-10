@@ -30,13 +30,21 @@ export function PeopleCard(props) {
 				<div className="card-body">
 					<h5 className="card-title">{props.name}</h5>
 					<p className="card-text">
-						<ul>
-							<li>Height: {peoplePage !== null && <div>{peoplePage.properties.height}</div>}</li>
-							<li>Mass: {peoplePage !== null && <div>{peoplePage.properties.mass}</div>}</li>
-							<li>Gender: {peoplePage !== null && <div>{peoplePage.properties.gender}</div>}</li>
-						</ul>
+						<div className="row">
+							<div className="col-4">Height:</div>
+							<div className="col-8">
+								{peoplePage !== null && <div>{peoplePage.properties.height}</div>}
+							</div>
+							<div className="col-4">Mass:</div>
+							<div className="col-8">
+								{peoplePage !== null && <div>{peoplePage.properties.mass}</div>}
+							</div>
+							<div className="col-4">Gender:</div>
+							<div className="col-8">
+								{peoplePage !== null && <div>{peoplePage.properties.gender}</div>}
+							</div>
+						</div>
 						<a href={"/people/" + props.uid}>Learn more</a>
-						{peoplePage !== null && <div>{peoplePage.properties.height}</div>}
 					</p>
 					{!favorites.includes(props.name) ? (
 						<button className="btn btn-outline-warning" onClick={handleClickFavorite}>

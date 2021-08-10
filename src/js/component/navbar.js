@@ -1,12 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FavoritesContext } from "../FavoritesContext";
 
 export const Navbar = () => {
 	const [showMenu, setShowMenu] = React.useState("");
+	const [favorites, setFavorites] = React.useContext(FavoritesContext);
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+			<Link to="/home">
+				<img
+					className="logo"
+					src="https://compass-ssl.xboxlive.com/assets/67/1c/671c739e-386a-4df3-9774-30e9e46eb53a.jpg?n=MSXC-StarWarsTitle-HeroAndImageCard-large-l-794x447-16x9-01.jpg"
+				/>
 			</Link>
 			<div className="dropdown">
 				<button
@@ -23,18 +28,21 @@ export const Navbar = () => {
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false">
-					Dropdown button
+					Favorites
 				</button>
 				<div className={"dropdown-menu " + showMenu} aria-labelledby="dropdownMenuButton">
-					<a className="dropdown-item" href="#">
-						Action
-					</a>
-					<a className="dropdown-item" href="#">
-						Another action
-					</a>
-					<a className="dropdown-item" href="#">
-						Something else here
-					</a>
+					<ul className="dropdown_button" href="#">
+						{favorites.map((item, index) => {
+							return (
+								<li key={index} className="dropdown-item">
+									<a className="dropdown-item" href="#">
+										{item}
+									</a>
+									<i className="far fa-trash-alt" />
+								</li>
+							);
+						})}
+					</ul>
 				</div>
 			</div>
 		</nav>
