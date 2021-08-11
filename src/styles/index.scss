@@ -10,6 +10,7 @@
 
 .container{
     margin: auto;
+    size: 100%;
 }
 
 .peopletitle{
@@ -20,7 +21,6 @@
 
 body{
     background-image: url(https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-31.jpg);
-
   background-attachment: scroll;
 
 }
@@ -37,8 +37,8 @@ body{
     margin-left: 50px;
 }
 
-.card{
-    background-color: grey;
+.cards{
+    background-color: white;
     font-family: 'Libre Baskerville', serif;
 }
 
@@ -135,33 +135,27 @@ body{
     color: darkblue;
 }
 
-.dropdown_button{
+.favorite-menu{
     border-radius: 5px;
-    width: 117px;
     height: 40px;
     border: none;
     font-family: 'Libre Baskerville', serif;
     margin-right: 50px;
+    font-size: 10px;
+    padding-left: 0;
+    padding-right: 0;
+
    
 }
 
+// .navbar{
+//     padding-left: 100px;
+//     padding-right: 100px;
+// }
+
+// .dropdown-item{
+//    padding-left: 5px;
+//     padding-right: 0;
+// }
 
 
-.downbutton{
-    color: #e75480;
-    margin-left: 8px;
-    padding-top: 10px;
-}
-
-.dropdown_menu{
-    width: 117px;
-    font-family: 'Libre Baskerville', serif;
-    
-}
-
-.dropdown-item{
-    display: inline-block;
-    font-size: 10px;
-    width: 100%;
-    padding: 0;
-}
