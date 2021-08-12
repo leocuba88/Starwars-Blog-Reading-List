@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FavoritesContext } from "../FavoritesContext";
 
-export function PeopleCard(props) {
-	const [peoplePage, setPeoplePage] = React.useState(null);
+export function PlanetsCard(props) {
+	const [planetsPage, setPlanetsPage] = React.useState(null);
 	const [favorites, setFavorites] = React.useContext(FavoritesContext);
 
 	React.useEffect(() => {
-		fetch("https://www.swapi.tech/api/people/" + props.uid)
+		fetch("https://www.swapi.tech/api/planets/" + props.uid)
 			.then(res => res.json())
-			.then(data => setPeoplePage(data.result))
+			.then(data => setPlanetsPage(data.result))
 			.catch(err => console.error(err));
 	}, []);
 
@@ -27,13 +27,13 @@ export function PeopleCard(props) {
 		<div className="card-group">
 			<div className="card">
 				<img
-					src={require(`/workspace/Starwars-Blog-Reading-List/src/img/people/${props.uid}.jpeg`)}
+					src={require(`/workspace/Starwars-Blog-Reading-List/src/img/planets/${props.uid}.jpg`)}
 					className="card-img-top"
 				/>
 				<div className="card-body">
 					<h5 className="card-title">{props.name}</h5>
 					<p className="card-text">
-						<a href={"/people/" + props.uid}>Learn more</a>
+						<a href={"/planets/" + props.uid}>Learn more</a>
 					</p>
 					{!favorites.includes(props.name) ? (
 						<button className="btn btn-outline-warning" onClick={handleClickFavorite}>
@@ -53,7 +53,7 @@ export function PeopleCard(props) {
 	);
 }
 
-PeopleCard.propTypes = {
+PlanetsCard.propTypes = {
 	name: PropTypes.string,
 	uid: PropTypes.string,
 	height: PropTypes.string,

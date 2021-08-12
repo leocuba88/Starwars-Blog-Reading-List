@@ -29,7 +29,7 @@ export const Home = () => (
 			</a>
 		</li>
 		<li>
-			<a href="/vehicles" className="home-card">
+			<a href="/planets" className="home-card">
 				<img
 					src="https://i.pinimg.com/564x/b7/13/bd/b713bd5dc256900e7aafeaa740ad5060.jpg"
 					className="home-card__image2"
@@ -52,7 +52,7 @@ export const Home = () => (
 			</a>
 		</li>
 		<li>
-			<a href="/planets" className="home-card">
+			<a href="/vehicles" className="home-card">
 				<img
 					src="https://i.pinimg.com/564x/88/6d/80/886d80931ecf151d7b15d58b05454a37.jpg"
 					className="home-card__image2"
