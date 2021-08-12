@@ -2,14 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../../styles/people.scss";
 import { PeopleCard } from "../component/peoplecard";
+import { useParams } from "react-router-dom";
 
 export function PeopleCardFull(props) {
+	const params = useParams();
+
 	return (
 		<div id="cards">
 			<figure className="cardpeople cardpeople--water">
 				<div className="cardpeople__image-container">
 					<img
-						src="https://aux.iconspalace.com/uploads/light-saber-green-icon-256.png"
+						src={require(`/workspace/Starwars-Blog-Reading-List/src/img/people/${params.id}.jpeg`)}
 						alt="Vaporeon"
 						className="cardpeople__image imgpeople"
 					/>
