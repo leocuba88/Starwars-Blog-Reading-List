@@ -27,7 +27,7 @@ export function VehiclesCard(props) {
 		<div className="card-group">
 			<div className="card">
 				<img
-					src={require(`/workspace/Starwars-Blog-Reading-List/src/img/vehicles/${props.uid}.jpg`)}
+					src={require(`/workspace/Starwars-Blog-Reading-List/src/img/vehicles/${props.uid}-vehicle.jpg`)}
 					className="card-img-top"
 				/>
 				<div className="card-body">

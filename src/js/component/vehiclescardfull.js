@@ -12,7 +12,7 @@ export function VehiclesCardFull(props) {
 			<figure className="cardpeople cardpeople--water">
 				<div className="cardpeople__image-container">
 					<img
-						src={require(`/workspace/Starwars-Blog-Reading-List/src/img/vehicles/${params.id}.jpg`)}
+						src={require(`/workspace/Starwars-Blog-Reading-List/src/img/vehicles/${params.id}-vehicle.jpg`)}
 						alt="Vaporeon"
 						className="cardpeople__image imgpeople"
 					/>
